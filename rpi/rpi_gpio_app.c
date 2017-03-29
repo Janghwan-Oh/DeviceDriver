@@ -18,20 +18,15 @@ int main(int argc, char *argv[])
 	printf("fd = %d\n", fd);
 	if (fd < 0) {
 		printf("Failed to open file\n");
-		exit(-1);
+		return -1;
 	}
 	printf("Success to open a file\n");
 
-	read(fd, buf, BUF_SIZE - 1);
+	sleep(2);
+	//read(fd, buf, BUF_SIZE - 1);
 	
 	close(fd);
     return 0;
 }
 
 
-
-void testFunc()
-{
-	
-
-}
